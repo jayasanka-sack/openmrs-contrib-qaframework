@@ -20,3 +20,15 @@ Cypress.Commands.add('initiateExceptionsLogger', () => {
     	return false;
     });
 });
+
+Cypress.Commands.add('loginToTheLocation', ( location ) => {
+    cy.task('getProperty', 'webapp.url').then(baseUrl => {
+        cy.visit(`${baseUrl}/login`);
+        cy.get('#username').type('admin');
+        cy.contains('Continue').click();
+        cy.get('#password').type('Admin123');
+        cy.contains('Log in').click();
+        cy.contains(location).click();
+        cy.get('button[type="submit"]').click();
+    });
+});
