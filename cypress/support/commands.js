@@ -134,7 +134,7 @@ Cypress.Commands.add('createPatient', (identifier = null) => {
     }
 });
 
-Cypress.Commands.add('startVisit', (patientUuid) => {
+Cypress.Commands.add('startFacilityVisit', (patientUuid) => {
     cy.request({
         method: 'POST',
         url: `${API_BASE_URL}/visit`,
