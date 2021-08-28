@@ -29,7 +29,8 @@
     "@types/uuid": "3.4.7",
     "cypress": "^8.2.0",
     "cypress-cucumber-preprocessor": "^4.0.1",
-    "cypress-file-upload": "^5.0.8"
+    "cypress-file-upload": "^5.0.8",
+    "del": "^6.0.0"
   },
   "cypress-cucumber-preprocessor": {
     "step_definitions": "cypress/integration/cucumber/step_definitions"

@@ -4,8 +4,9 @@
     "*.feature",
     "**/*.feature"
   ],
-  "video": false,
-  "defaultCommandTimeout": 120000,
+  "video": true,
+  "screenshots": false,
+  "defaultCommandTimeout": 40000,
   "baseUrl": "https://openmrs-spa.org/openmrs/spa",
   "env": {
     "API_BASE_URL": "https://openmrs-spa.org/openmrs/ws/rest/v1",
