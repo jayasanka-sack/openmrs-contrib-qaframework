@@ -19,7 +19,7 @@ jobs:
         with:
           repository: ${{github.repository}}
       - name: Run db and web containers
-        run: docker-compose -f docker/docker-compose-refqa-3x.yml up -d
+        run: docker-compose -f docker/docker-compose-refqa-3x.yml up
       - name: Wait for Openmrs instance to start
         run: while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' http://localhost/openmrs/ws/rest/v1/session)" != "304" ]]; do sleep 2; done
       - name: Using Node.js
